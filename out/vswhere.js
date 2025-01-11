@@ -37,7 +37,7 @@ var vswhere;
             }
             const args = getVSWhereArgs(options);
             const vswhere = yield findVSWhere();
-            const proc = (0, child_process_1.spawn)(vswhere, args, {});
+            const proc = (0, child_process_1.spawn)("cmd.exe", ['/c', `chcp 65001>nul && "${vswhere}" ${args.join(' ')}`], { shell: true });
             const installations = yield new Promise((resolve, reject) => {
                 const result = [];
                 const error = [];

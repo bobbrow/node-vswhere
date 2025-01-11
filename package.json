@@ -1,0 +1,31 @@
+{
+  "name": "node-vswhere",
+  "version": "1.0.0",
+  "description": "Get information about Visual Studio installations",
+  "typings": "./out/vswhere.d.ts",
+  "main": "./out/vswhere.js",
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.5",
+    "mocha": "^11.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "test": "npx mocha --require ts-node/register ./test/vswhere.test.ts"
+  },
+  "keywords": [
+    "vswhere"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bobbrow/node-vswhere.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bobbrow/node-vswhere/issues"
+  },
+  "author": "Bob Brown",
+  "publisher": "bobbrow",
+  "license": "MIT"
+}

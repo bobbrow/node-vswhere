@@ -1,6 +1,6 @@
 {
   "name": "node-vswhere",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get information about Visual Studio installations",
   "typings": "./out/vswhere.d.ts",
   "main": "./out/vswhere.js",

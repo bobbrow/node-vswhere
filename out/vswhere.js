@@ -26,7 +26,8 @@ var vswhere;
     })(Product = vswhere_1.Product || (vswhere_1.Product = {}));
     /**
      * Gets information about the Visual Studio installations on the machine.
-     * @param options Options for querying Visual Studio installations.
+     * @param options Options for querying Visual Studio installations. If no options are set, `all`,
+     * `prerelease`, and `sort` will default to `true`.
      * @returns A promise that resolves to an array of Visual Studio installation information objects.
      * @throws An error if `vswhere` could not be found or if `vswhere` reports an error.
      */

@@ -94,15 +94,15 @@ export namespace vswhere {
         prerelease?: boolean;
 
         /**
-         * One or more product IDs to find. Defaults to Community, Professional, and Enterprise. Leave this
-         * unset to search all product instances installed.
+         * One or more product IDs to find. Leave this unset to search all product instances installed.
          */
         products?: Product[];
 
         /**
          * One or more workload or component IDs required when finding instances. All specified IDs must
          * be installed unless -requiresAny is specified. You can specify wildcards including "?" to match
-         * any one character, or "*" to match zero or more of any characters.
+         * any one character, or "*" to match zero or more of any characters. See https://aka.ms/vs/workloads
+         * for a list of workload and component IDs.
          */
         requires?: string[];
 
@@ -135,7 +135,8 @@ export namespace vswhere {
 
     /**
      * Gets information about the Visual Studio installations on the machine.
-     * @param options Options for querying Visual Studio installations.
+     * @param options Options for querying Visual Studio installations. If no options are set, `all`,
+     * `prerelease`, and `sort` will default to `true`.
      * @returns A promise that resolves to an array of Visual Studio installation information objects.
      * @throws An error if `vswhere` could not be found or if `vswhere` reports an error.
      */
